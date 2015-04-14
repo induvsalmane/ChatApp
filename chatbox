@@ -8,7 +8,6 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.net.*;
 
-
 //JChatBox
 public class JChatBox implements Runnable {
    // Connect status constants
@@ -112,7 +111,7 @@ public class JChatBox implements Runnable {
       pane.add(portField);
       optionsPane.add(pane);
 
-      // Host/guest option
+      // server/client option
       buttonListener = new ActionAdapter() {
             public void actionPerformed(ActionEvent e) {
                if (connectionStatus != DISCONNECTED) {
