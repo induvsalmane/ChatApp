@@ -57,8 +57,6 @@ public class JChatBox implements Runnable {
    public static BufferedReader in = null;
    public static PrintWriter out = null;
 
-   /////////////////////////////////////////////////////////////////
-
    private static JPanel initOptionsPane() {
       JPanel pane = null;
       ActionAdapter buttonListener = null;
@@ -182,8 +180,6 @@ public class JChatBox implements Runnable {
       return optionsPane;
    }
 
-   /////////////////////////////////////////////////////////////////
-
    // Initialize all the GUI components and display the frame
    private static void initGUI() {
       // Set up the status bar
@@ -245,8 +241,6 @@ public class JChatBox implements Runnable {
       mainFrame.setVisible(true);
    }
 
-   /////////////////////////////////////////////////////////////////
-
    // The thread-safe way to change the GUI components while
    // changing state
    private static void changeStatusTS(int newConnectStatus, boolean noError) {
@@ -268,8 +262,6 @@ public class JChatBox implements Runnable {
       // error-handling and GUI-update thread
       SwingUtilities.invokeLater(jchat);
    }
-
-   /////////////////////////////////////////////////////////////////
 
    // The non-thread-safe way to change the GUI components while
    // changing state
@@ -293,8 +285,6 @@ public class JChatBox implements Runnable {
       jchat.run();
    }
 
-   /////////////////////////////////////////////////////////////////
-
    // Thread-safe way to append to the chat box
    private static void appendToChatBox(String s) {
       synchronized (toAppend) {
@@ -302,16 +292,12 @@ public class JChatBox implements Runnable {
       }
    }
 
-   /////////////////////////////////////////////////////////////////
-
    // Add text to send-buffer
    private static void sendString(String s) {
       synchronized (toSend) {
          toSend.append(s + "\n");
       }
    }
-
-   /////////////////////////////////////////////////////////////////
 
    // Cleanup for disconnect
    private static void cleanUp() {
@@ -344,8 +330,6 @@ public class JChatBox implements Runnable {
          out = null;
       }
    }
-
-   /////////////////////////////////////////////////////////////////
 
    // Checks the current state and sets the enables/disables
    // accordingly
@@ -410,8 +394,6 @@ public class JChatBox implements Runnable {
 
       mainFrame.repaint();
    }
-
-   /////////////////////////////////////////////////////////////////
 
    // The main procedure
 public static void main(String args[]) {
