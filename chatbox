@@ -485,7 +485,6 @@ catch (Exception ex) {
 }
 
 
-
 // Action adapter for easy event-listener coding
 class ActionAdapter implements ActionListener {
    public void actionPerformed(ActionEvent e) {}
