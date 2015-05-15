@@ -84,7 +84,7 @@ public class JChatBox implements Runnable {
       pane.add(ipField);
       optionsPane.add(pane);
 
-      // Port input
+      // Port-input
       pane = new JPanel(new FlowLayout(FlowLayout.RIGHT));
       pane.add(new JLabel("Port:"));
       portField = new JTextField(10); portField.setEditable(true);
